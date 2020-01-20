@@ -7,11 +7,10 @@
   "license": "GPLv3",
   "private": true,
   "scripts": {
-    "run-server": "superstatic --port=8080 --compression --gzip --config=superstatic.json",
+    "start": "nodemon --exec babel-node src/server.js",
     "js-typecheck": "yarn flow",
     "js-unit": "yarn jest --coverage",
-    "test": "yarn js-typecheck && yarn js-unit",
-    "watch": "yarn webpack --watch & yarn run-server"
+    "test": "yarn js-typecheck && yarn js-unit"
   },
   "devDependencies": {
     "flow-bin": "^0.113.0",
@@ -20,6 +19,9 @@
     "nodemon": "^2.0.2"
   },
   "dependencies": {
+    "@babel/core": "^7.8.3",
+    "@babel/node": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
     "express": "^4.17.1",
     "mongoose": "^5.8.9"
   }
