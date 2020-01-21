@@ -7,22 +7,28 @@
   "license": "GPLv3",
   "private": true,
   "scripts": {
+    "start-db": "mongod",
     "start": "nodemon --exec babel-node src/server.js",
     "js-typecheck": "yarn flow",
-    "js-unit": "yarn jest --coverage",
+    "js-unit": "yarn jest --coverage --runInBand",
     "test": "yarn js-typecheck && yarn js-unit"
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.8.3",
+    "@babel/preset-flow": "^7.8.3",
     "flow-bin": "^0.113.0",
     "flow-typed": "^2.6.2",
     "jest": "^24.9.0",
-    "nodemon": "^2.0.2"
+    "nodemon": "^2.0.2",
+    "supertest": "^4.0.2"
   },
   "dependencies": {
     "@babel/core": "^7.8.3",
     "@babel/node": "^7.8.3",
-    "@babel/preset-env": "^7.8.3",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
     "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.8.9"
   }
 }

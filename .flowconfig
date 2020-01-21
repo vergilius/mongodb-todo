@@ -1,5 +1,6 @@
 [ignore]
 node_modules/.cache
+<PROJECT_ROOT>/node_modules/bcryptjs/src/bower.json
 
 [include]
 demo/
